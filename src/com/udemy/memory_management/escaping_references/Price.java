@@ -17,14 +17,7 @@ public class Price {
 	}
 		
 	public Double convert(String toCurrency) {
-		
-		if (toCurrency.equals("USD")) {
-			return value;
-		}
-		else {
-			Double conversion = rates.get("USD") * rates.get(toCurrency);
-			return conversion * value;
-		}
+		return value * (rates.get(toCurrency)* rates.get("USD")); 
 	}
 	
 	public String toString() {
