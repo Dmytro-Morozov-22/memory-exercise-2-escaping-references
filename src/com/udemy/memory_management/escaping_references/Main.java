@@ -25,15 +25,15 @@ public class Main {
 		bc.printAllBooks();
 		
 		//PROBLEM 2 - can we change a book?
-		Book emma = bc.findBookByName("Emma");
-		emma.setPrice(999d);
+		ReadOnlyBook emma = bc.findBookByName("Emma");
+		//emma.setPrice(999d); //There is no any opportunities to use the setPrice method 
 		bc.printAllBooks();
 		
 		System.out.println("---END OF PROBLEM 2---\n");
 		
 		System.out.println("---START OF PROBLEM 3---");
 		//Print out the price of the book Tom Jones
-		Book book = bc.findBookByName("Tom Jones");
+		ReadOnlyBook book = bc.findBookByName("Tom Jones");
 		System.out.println("Tom Jones costs USD " + book.getPrice());
 		System.out.println("Tom Jones costs EUR " + book.getPrice().convert("EUR"));
 		System.out.println("Tom Jones costs GBP " + book.getPrice().convert("GBP"));

@@ -1,23 +1,11 @@
 package com.udemy.memory_management.escaping_references;
 
-public class Book {
+public class Book implements ReadOnlyBook {
 	private int id;
 	private String title;
 	private String author;
 	private Price price;
 	
-	public int getId() {
-		return id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public String getAuthor() {
-		return author;
-	}
-
 	public Book(int id, String title, String author, Double price) {
 		this.id = id;
 		this.title = title;
@@ -25,15 +13,32 @@ public class Book {
 		this.price = new Price(price);
 	}
 	
-	public String toString() {
-		return title + " by " + author;
+	@Override
+	public int getId() {
+		return id;
 	}
-	
+
+	@Override
+	public String getTitle() {
+		return title;
+	}
+
+	@Override
+	public String getAuthor() {
+		return author;
+	}
+
+	@Override
 	public Price getPrice() {
 		return this.price;
 	}
 	
 	public void setPrice(Double price) {
 		this.price = new Price(price);
+	}
+	
+	@Override
+	public String toString() {
+		return title + " by " + author;
 	}
 }

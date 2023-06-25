@@ -21,7 +21,7 @@ public class BookCollection {
 		 books.add(new Book(10,"The Count of Monte Christo","Alexandre Dumas",3.99));
 	}
 	
-	public Book findBookByName(String title) {
+	public ReadOnlyBook findBookByName(String title) {
 		for (Book book : books) {
 			if (book.getTitle().equals(title)) {
 				return book;
@@ -31,7 +31,7 @@ public class BookCollection {
 	}
 	
 	public void printAllBooks() {
-		for (Book book : books) {
+		for (ReadOnlyBook book : books) {
 			System.out.println(book.getTitle() + ": " + book.getPrice());
 		}
 	}
