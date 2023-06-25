@@ -16,7 +16,7 @@ public class Main {
 		System.out.println("The current exchange rates are USD 1 = ");
 		price.getRates().forEach( (k,v) -> System.out.println(k + " " + v));
 		
-		System.out.println("---END OF PROBLEM 1---");
+		System.out.println("---END OF PROBLEM 1---\n");
 		
 		System.out.println("---START OF PROBLEM 2---");
 		
@@ -29,7 +29,7 @@ public class Main {
 		emma.setPrice(999d);
 		bc.printAllBooks();
 		
-		System.out.println("---END OF PROBLEM 2---");
+		System.out.println("---END OF PROBLEM 2---\n");
 		
 		System.out.println("---START OF PROBLEM 3---");
 		//Print out the price of the book Tom Jones

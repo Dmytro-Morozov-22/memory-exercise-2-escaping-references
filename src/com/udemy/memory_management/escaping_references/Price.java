@@ -33,7 +33,9 @@ public class Price {
 	}
 	
 	public Map<String,Double> getRates() {
-		return rates;
+		return new HashMap<>(rates);
+//		return Map.copyOf(rates);
+//		return Collections.unmodifiableMap(rates);
 	}
 	
 }
